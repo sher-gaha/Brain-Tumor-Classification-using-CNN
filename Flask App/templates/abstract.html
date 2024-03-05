@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color: #160303ea;
+        }
+
+        p {
+            color: #0e0404;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+
+    <h2>ABSTRACT</h2>
+    
+    <p>
+        Brain Tumor is the uncontrolled growths of extra cellular mass of tissue. Brain tumors are very common and aggressive disease,
+        leading to very disability or very short life expectancy. It is very important that it needs to be detected as early as possible 
+        for proper treatment since it may be deadly and cannot be cured if it’s too late. Affected people may not notice any symptoms at first, 
+        but if the cancer cells grow too big, it starts to show negative impacts on the body. Neurologists and radiologists need to perform many 
+        tests to diagnose this threatening disease. It requires a lot of time and expenses, and there is a human error factor as well in classifying 
+        the wrong tumor. So for detecting brain tumor, we have to build a model to lessen the time and cost. In this paper, we have proposed a 
+        Convolution Neural Network (CNN) system for early detection of brain tumor. The system is trained using the preprocessed MRI images, 
+        and when new input images are given to the system, it classifies glioma, meningioma, pituitary tumor, or no tumor based on the features extracted during training.
+    </p>
+    
+    <p>
+        Keywords: Brain Tumor, Convolution Neural Network, Deep Learning, InceptionV3
+    </p>
+</body>
+</html>

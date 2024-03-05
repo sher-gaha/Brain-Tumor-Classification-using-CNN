@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <!-- Dynamically generating based on provoded function names-->
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Logout</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+    <h1>Brain Tumor Classification Page</h1>
+    <h3>Welcome, {{ current_user.username }}!</h3>
+
+    <form method="post" action="" enctype="multipart/form-data">
+        <label class="font-weight-light text-muted" for="selected_image">Select Brain MRI Image:</label>
+        <input type="file" id="selected_image" name="selected_image" accept="image/*" required><br>
+        
+        <button type="submit">Classify</button>
+    </form>
+
+    
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li class="flash-result">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+
+
+    {% if result %}
+        <h2>Classification Result</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+    <br>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+    <h1>Welcome to the Brain Tumor Classification System</h1>
+
+    <a href="{{ url_for('abstract') }}">Abstract</a>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #180909;
+        }
+/* 
+        nav {
+            background-color: #368ea8;
+            padding: 10px;
+        } */
+
+        /* ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            margin-right: 0px;
+        }
+
+        li a {
+            display: block;
+            color: rgb(20, 11, 11);
+            text-align: center;
+            padding: 5px 5px;
+            text-decoration: none;
+        } */
+
+        h1 {
+            color: #333;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4caf50;
+            color: rgb(51, 23, 23);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            margin-left: 20px; /* Adjust the left margin as needed */
+        }
+
+        a.button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+    <h1>Welcome to the Brain Tumor Classification System</h1>
+
+    <a href="{{ url_for('abstract') }}" class="button">Abstract</a>
+</body>
+</html>

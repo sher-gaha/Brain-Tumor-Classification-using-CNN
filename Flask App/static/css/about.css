@@ -1,0 +1,44 @@
+/* about_styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #4d96c0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    line-height: 1.5;
+    color: #555;
+}
+
+nav {
+    background-color: #417d8d;
+    padding: 10px;
+    width: 100%;
+    position:fixed;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /*Align menu items to the right */
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(54, 27, 27);
+    font-weight: bold;
+    font-size: 16px;
+}

@@ -1,0 +1,78 @@
+/* contact_styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #5e94ad; /* Light bluish background */
+}
+
+h1 {
+    color: #004080; /* Dark blue text color */
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #5d90be; /* White background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #004080; /* Dark blue text color */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #99c2ff; /* Lighter blue border */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #0073e6; /* Medium blue button color */
+    color: rgb(19, 4, 4);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+nav {
+    background-color: #417d8d;
+    padding: 10px;
+    width: 100%;
+    position:fixed;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /*Align menu items to the right */
+}
+
+nav ul li {
+    margin-right:50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(54, 27, 27);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
