@@ -81,37 +81,6 @@ def login():
 
     return render_template('login.html', error=None)
 
-# @app.route('/classification', methods=['GET', 'POST'])
-# def classification():
-#     global current_user
-
-#     if current_user is None:
-#         return redirect(url_for('login'))
-
-#     if request.method == 'POST':
-#         #selected_image = request.files['selected_image']
-#         selected_image = request.files.get('selected_image')
-#         #selected_class = request.form.get('selected_class')
-
-#         if 'selected_image' not in request.files or selected_image.filename == '':
-#             flash('Select an image before submitting.') # added later
-#             return render_template('classification.html', result='Select image', current_user=current_user)
-
-#         if selected_image and allowed_file(selected_image.filename):
-#             filename = secure_filename(selected_image.filename)
-#             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-#             selected_image.save(filepath)
-
-#             # Use the loaded TensorFlow model to classify the image
-#             result = classify_image(filepath)
-
-#             os.remove(filepath)  # Remove the uploaded file after classification
-#             return render_template('classification.html', result=result, current_user=current_user)
-
-#     return render_template('classification.html', current_user=current_user)
-
-
-
 @app.route('/classification', methods=['GET', 'POST'])
 def classification():
     global current_user
@@ -153,38 +122,6 @@ def classification():
         return redirect(url_for('classification'))
 
     return render_template('classification.html', current_user=current_user)
-
-
-# def classify_image(img_path):
-
-#     if model is not None:
-#         img = image.load_img(img_path, target_size=(299, 299))
-#         print(f"Image Loaded Successfully: {img}")
-#         img_array = image.img_to_array(img)
-#         img_array = np.expand_dims(img_array, axis=0)
-#         print("Image Array Values:", img_array)
-#         img_array /= 255.0  # Rescale to [0,1]
-
-
-#         #print("Image Array Shape:", img_array.shape)
-#         #print("Image Array Values:", img_array)
-
-#         # Display the loaded image
-#         # plt.imshow(img)
-#         # plt.title("Loaded Image")
-#         # plt.show()
-
-#         predictions = model.predict(img_array)
-#         class_index = np.argmax(predictions)
-        
-#         # Replace with actual class labels
-#         class_labels = ['glioma', 'meningioma', 'no_tumor', 'pituitary']
-#         predicted_class = class_labels[class_index]
-
-#         return predicted_class
-#     else:
-#         return "model not found"
-
 
 def classify_image(img_path):
 
